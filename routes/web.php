@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/posts/create', 'PostController@create');
-Route::get('/posts', 'PostController@index');
+
+
 Route::get('/', 'PostController@index');
+Route::get('/posts', 'PostController@index');
+Route::get('/posts/create', 'PostController@create');
+Route::get('/posts/{post}/edit', 'PostController@edit');
 Route::get('/posts/{post}', 'PostController@show');
+Route::put('/posts/{post}', 'PostController@update');
 Route::post('/posts', 'PostController@store');
